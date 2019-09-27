@@ -122,8 +122,13 @@
               "devServerTarget": "bwvolleyball-github-io-src:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "bwvolleyball-github-io-src"
 }
