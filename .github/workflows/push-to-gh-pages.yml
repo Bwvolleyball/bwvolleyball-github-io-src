@@ -1,0 +1,26 @@
+name: Push to Github Pages
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: |
+        npm install -g @angular/cli
+        npm ci
+        ng deploy --repo=https://github.com/bwvolleyball/bwvolleyball.github.io.git --name=$USERNAME --email=$EMAIL
+      env:
+        CI: true
