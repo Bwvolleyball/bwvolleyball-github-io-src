@@ -21,6 +21,8 @@ jobs:
       run: |
         npm install -g @angular/cli
         npm ci
-        ng deploy --repo=https://github.com/bwvolleyball/bwvolleyball.github.io.git --name=$USERNAME --email=$EMAIL
+        ng deploy --repo=https://github.com/bwvolleyball/bwvolleyball.github.io.git --name=bwvolleyball --email=$EMAIL
       env:
         CI: true
+        GH_TOKEN: ${{ secrets.GithubToken }}
+        EMAIL: ${{ secrets.Email }}
