@@ -1,6 +1,9 @@
 name: Push to Github Pages
 
-on: [push]
+on:
+  push:
+    branches:
+      - master # - only push to GitHub pages from the master branch
 
 jobs:
   build:
