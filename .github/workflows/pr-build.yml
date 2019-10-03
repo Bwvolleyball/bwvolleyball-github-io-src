@@ -1,8 +1,8 @@
 name: Lint, Build, and Test PRs
 
 on:
-  push:
-    pull_request:
+  pull_request:
+    branches:
       - master # - build and test for PRs going into master.
 
 jobs:
