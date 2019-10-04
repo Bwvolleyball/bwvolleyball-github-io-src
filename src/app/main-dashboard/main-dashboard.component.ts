@@ -20,10 +20,10 @@ export class MainDashboardComponent {
     map(({matches}) => {
       if (matches) {
         return [
-          {title: 'LinkedIn', cols: 1, rows: 1, content: this.wipCardComponent},
-          {title: 'Resume', cols: 1, rows: 1, content: this.wipCardComponent},
-          {title: 'Twitter', cols: 1, rows: 1, content: this.twitterFeedComponent},
-          {title: 'Blogs', cols: 1, rows: 1, content: this.wipCardComponent}
+          {title: 'LinkedIn', cols: 2, rows: 1, content: this.wipCardComponent},
+          {title: 'Resume', cols: 2, rows: 1, content: this.wipCardComponent},
+          {title: 'Twitter', cols: 2, rows: 1, content: this.twitterFeedComponent},
+          {title: 'Blogs', cols: 2, rows: 1, content: this.wipCardComponent}
         ];
       }
 
