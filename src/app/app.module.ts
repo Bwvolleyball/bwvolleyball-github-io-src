@@ -17,15 +17,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
 import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
+import { WipCardComponent } from './wip-card/wip-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainDashboardComponent,
     MainNavComponent,
-    TwitterFeedComponent
+    TwitterFeedComponent,
+    WipCardComponent
   ],
-  entryComponents: [TwitterFeedComponent],
+  entryComponents: [TwitterFeedComponent, WipCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
