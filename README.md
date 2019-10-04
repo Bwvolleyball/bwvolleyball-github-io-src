@@ -1,5 +1,12 @@
-# BwvolleyballGithubIoSrc
+# bwvolleyball.github.io (Source)
+> This project is the source code for my GitHub Pages website.
 
+This is an Angular project, being used as my [GitHub pages website](https://bwvolleyball.github.io/).
+
+If you would also like to make your owh GitHub pages website using Angular, 
+[check out my blog](https://medium.com/@brandon.ward1993/angular-for-github-pages-35be855a4b0?source=friends_link&sk=835ad2a4cb6cf032d71403f966f6504e) for a brief tutorial!
+
+# Angular Generated Readme
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
 ## Development server
