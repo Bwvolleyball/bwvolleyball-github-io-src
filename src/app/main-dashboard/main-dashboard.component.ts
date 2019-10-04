@@ -3,6 +3,7 @@ import {map} from 'rxjs/operators';
 import {Breakpoints, BreakpointObserver} from '@angular/cdk/layout';
 import {TwitterFeedComponent} from '../twitter-feed/twitter-feed.component';
 import {WipCardComponent} from '../wip-card/wip-card.component';
+import {LinkedinBadgeComponent} from '../linkedin-badge/linkedin-badge.component';
 
 @Component({
   selector: 'app-main-dashboard',
@@ -13,6 +14,7 @@ export class MainDashboardComponent {
 
   injector: Injector;
   twitterFeedComponent = TwitterFeedComponent;
+  linkedinBadgeComponent = LinkedinBadgeComponent;
   wipCardComponent = WipCardComponent;
 
   /** Based on the screen size, switch from standard to one column per row */
@@ -20,16 +22,16 @@ export class MainDashboardComponent {
     map(({matches}) => {
       if (matches) {
         return [
-          {title: 'LinkedIn', cols: 1, rows: 1, content: this.wipCardComponent},
-          {title: 'Resume', cols: 1, rows: 1, content: this.wipCardComponent},
-          {title: 'Twitter', cols: 1, rows: 1, content: this.twitterFeedComponent},
-          {title: 'Blogs', cols: 1, rows: 1, content: this.wipCardComponent}
+          {title: 'Resume', cols: 2, rows: 1, content: this.wipCardComponent},
+          {title: 'LinkedIn', cols: 2, rows: 1, content: this.linkedinBadgeComponent},
+          {title: 'Twitter', cols: 2, rows: 1, content: this.twitterFeedComponent},
+          {title: 'Blogs', cols: 2, rows: 1, content: this.wipCardComponent}
         ];
       }
 
       return [
-        {title: 'LinkedIn', cols: 2, rows: 1, content: this.wipCardComponent},
-        {title: 'Resume', cols: 1, rows: 1, content: this.wipCardComponent},
+        {title: 'Resume', cols: 2, rows: 1, content: this.wipCardComponent},
+        {title: 'LinkedIn', cols: 1, rows: 1, content: this.linkedinBadgeComponent},
         {title: 'Twitter', cols: 1, rows: 2, content: this.twitterFeedComponent},
         {title: 'Blogs', cols: 1, rows: 1, content: this.wipCardComponent}
       ];

@@ -18,6 +18,7 @@ import { MatListModule } from '@angular/material/list';
 
 import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
 import { WipCardComponent } from './wip-card/wip-card.component';
+import { LinkedinBadgeComponent } from './linkedin-badge/linkedin-badge.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +26,10 @@ import { WipCardComponent } from './wip-card/wip-card.component';
     MainDashboardComponent,
     MainNavComponent,
     TwitterFeedComponent,
-    WipCardComponent
+    WipCardComponent,
+    LinkedinBadgeComponent
   ],
-  entryComponents: [TwitterFeedComponent, WipCardComponent],
+  entryComponents: [TwitterFeedComponent, LinkedinBadgeComponent, WipCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
