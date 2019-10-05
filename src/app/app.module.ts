@@ -19,6 +19,7 @@ import { MatListModule } from '@angular/material/list';
 import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
 import { WipCardComponent } from './wip-card/wip-card.component';
 import { LinkedinBadgeComponent } from './linkedin-badge/linkedin-badge.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LinkedinBadgeComponent } from './linkedin-badge/linkedin-badge.componen
     MainNavComponent,
     TwitterFeedComponent,
     WipCardComponent,
-    LinkedinBadgeComponent
+    LinkedinBadgeComponent,
+    FooterComponent
   ],
   entryComponents: [TwitterFeedComponent, LinkedinBadgeComponent, WipCardComponent],
   imports: [
