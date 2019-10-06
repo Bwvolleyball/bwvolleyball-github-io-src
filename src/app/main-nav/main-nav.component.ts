@@ -3,6 +3,7 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 import {Observable} from 'rxjs';
 import {map, shareReplay} from 'rxjs/operators';
 import {NavbarItem} from './navbar-item';
+import {ScreenSizeService} from '../screen-size/screen-size.service';
 
 @Component({
   selector: 'app-main-nav',
@@ -11,17 +12,9 @@ import {NavbarItem} from './navbar-item';
 })
 export class MainNavComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+  isHandset$: Observable<boolean> = this.screenSizeService.isHandset();
 
-  isNotHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => !result.matches),
-      shareReplay()
-    );
+  isNotHandset$: Observable<boolean> = this.screenSizeService.isNotHandset();
 
   navbarItems: NavbarItem[] = [
     {
@@ -31,7 +24,7 @@ export class MainNavComponent {
     }
   ];
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver, private screenSizeService: ScreenSizeService) {
   }
 
 }

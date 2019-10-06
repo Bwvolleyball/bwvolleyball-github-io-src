@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ScreenSizeService} from '../screen-size/screen-size.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  isNotHandset: Observable<boolean> = this.screenSizeService.isNotHandset();
+  isHandset: Observable<boolean> = this.screenSizeService.isHandset();
+
+  constructor(private screenSizeService: ScreenSizeService) { }
 
   ngOnInit() {
   }

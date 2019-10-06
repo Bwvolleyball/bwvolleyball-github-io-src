@@ -1,7 +1,7 @@
 <mat-toolbar color="primary" role="toolbar" class="mat-typography light-text">
-  <div class="mat-body-strong"><p>Powered by Angular & Angular Material</p></div>
+  <div class="mat-body-strong"><p>Powered by Angular <span *ngIf="isNotHandset | async">& Angular Material</span></p></div>
   <div class="fill-remaining-space"></div>
-  <div class="mat-body-strong">
+  <div class="mat-body-strong" *ngIf="isNotHandset | async">
     <p>
       <a href="https://github.com/Bwvolleyball/bwvolleyball-github-io-src">Fork me on GitHub</a>
     </p>
