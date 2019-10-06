@@ -20,6 +20,7 @@ import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
 import { WipCardComponent } from './wip-card/wip-card.component';
 import { LinkedinBadgeComponent } from './linkedin-badge/linkedin-badge.component';
 import { FooterComponent } from './footer/footer.component';
+import { MediumFeedComponent } from './medium-feed/medium-feed.component';
 
 @NgModule({
   declarations: [
@@ -29,9 +30,10 @@ import { FooterComponent } from './footer/footer.component';
     TwitterFeedComponent,
     WipCardComponent,
     LinkedinBadgeComponent,
-    FooterComponent
+    FooterComponent,
+    MediumFeedComponent
   ],
-  entryComponents: [TwitterFeedComponent, LinkedinBadgeComponent, WipCardComponent],
+  entryComponents: [TwitterFeedComponent, LinkedinBadgeComponent, MediumFeedComponent, WipCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
