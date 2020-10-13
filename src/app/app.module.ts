@@ -21,6 +21,7 @@ import { WipCardComponent } from './wip-card/wip-card.component';
 import { LinkedinBadgeComponent } from './linkedin-badge/linkedin-badge.component';
 import { FooterComponent } from './footer/footer.component';
 import { MediumFeedComponent } from './medium-feed/medium-feed.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MediumFeedComponent } from './medium-feed/medium-feed.component';
     WipCardComponent,
     LinkedinBadgeComponent,
     FooterComponent,
-    MediumFeedComponent
+    MediumFeedComponent,
+    ResumeComponent
   ],
   entryComponents: [TwitterFeedComponent, LinkedinBadgeComponent, MediumFeedComponent, WipCardComponent],
   imports: [
