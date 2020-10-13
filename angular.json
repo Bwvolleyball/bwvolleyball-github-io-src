@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "bwvolleyball-github-io-src"
+  "defaultProject": "bwvolleyball-github-io-src",
+  "cli": {
+    "analytics": "97aa7f59-665d-4068-9310-294da7379409"
+  }
 }
