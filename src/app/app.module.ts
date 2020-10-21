@@ -22,6 +22,7 @@ import { LinkedinBadgeComponent } from './linkedin-badge/linkedin-badge.componen
 import { FooterComponent } from './footer/footer.component';
 import { MediumFeedComponent } from './medium-feed/medium-feed.component';
 import { ResumeComponent } from './resume/resume.component';
+import { DashboardComponent } from './code/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ResumeComponent } from './resume/resume.component';
     LinkedinBadgeComponent,
     FooterComponent,
     MediumFeedComponent,
-    ResumeComponent
+    ResumeComponent,
+    DashboardComponent
   ],
   entryComponents: [TwitterFeedComponent, LinkedinBadgeComponent, MediumFeedComponent, WipCardComponent],
   imports: [
