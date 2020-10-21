@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {BreakpointObserver} from '@angular/cdk/layout';
 import {Observable} from 'rxjs';
-import {map, shareReplay} from 'rxjs/operators';
 import {NavbarItem} from './navbar-item';
 import {ScreenSizeService} from '../screen-size/screen-size.service';
 
@@ -20,7 +19,12 @@ export class MainNavComponent {
     {
       title: 'Home',
       route: '/home',
-      icon: 'icon'
+      icon: 'home'
+    },
+    {
+      title: 'Code',
+      route: '/code',
+      icon: 'code'
     }
   ];
 
