@@ -1,0 +1,6 @@
+<p>This page is a work in progress. Come back soon to see what I'm building!</p>
+<br>
+<div *ngFor="let post of posts">
+  <div>{{post.name}}</div>
+  <markdown [src]="post.path"></markdown>
+</div>

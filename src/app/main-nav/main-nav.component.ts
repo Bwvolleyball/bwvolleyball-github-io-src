@@ -25,6 +25,11 @@ export class MainNavComponent {
       title: 'Code',
       route: '/code',
       icon: 'code'
+    },
+    {
+      title: 'Blog',
+      route: '/blog',
+      icon: 'engineering'
     }
   ];
 
