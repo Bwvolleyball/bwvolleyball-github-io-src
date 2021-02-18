@@ -15,6 +15,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { TwitterFeedComponent } from './twitter-feed/twitter-feed.component';
 import { WipCardComponent } from './wip-card/wip-card.component';
@@ -51,6 +52,7 @@ import { BlogComponent } from './blog/blog.component';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
+    MatTabsModule,
     LayoutModule,
     MatToolbarModule,
     MatSidenavModule,

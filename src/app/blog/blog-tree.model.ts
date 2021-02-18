@@ -6,3 +6,7 @@ export interface BlogPost {
   name: string;
   size: number;
 }
+
+export interface DecoratedBlogPost extends BlogPost {
+  folder: string;
+}

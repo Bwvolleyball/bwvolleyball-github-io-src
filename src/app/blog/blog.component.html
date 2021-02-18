@@ -1,6 +1,25 @@
 <p>This page is a work in progress. Come back soon to see what I'm building!</p>
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab  *ngFor="let folder of folders" [label]="folder">
+    <mat-list>
+<!--      <div mat-subheader>{{folder}}</div>-->
+      <mat-list-item *ngFor="let post of organizedPosts.get(folder)">
+        <!-- TODO: pipe these names to something nice to read -->
+        <button [id]="post.name + '_btn'"
+                mat-raised-button
+                type="button"
+                color="primary" (click)="selectPost(post)">
+          {{post.name}}
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-tab>
+</mat-tab-group>
 <br>
-<div *ngFor="let post of posts">
-  <div>{{post.name}}</div>
-  <markdown [src]="post.path"></markdown>
-</div>
+<ng-container *ngIf="selectedPost">
+  <div class="blog-container"> <!-- TODO: Make a blog container class / mat-card? -->
+    <h3>{{selectedPost.name}}</h3>
+    <br>
+    <markdown [src]="selectedPost.path"></markdown>
+  </div>
+</ng-container>
