@@ -1,7 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {BlogService} from './blog.service';
 import {Subscription} from 'rxjs';
-import {BlogPost, DecoratedBlogPost} from './blog-tree.model';
+import {DecoratedBlogPost} from './blog-tree.model';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -17,11 +18,27 @@ export class BlogComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription = new Subscription();
 
-  constructor(private blogService: BlogService) { }
+  constructor(
+    private blogService: BlogService,
+    private route: ActivatedRoute,
+    private router: Router,
+    ) { }
 
   ngOnInit(): void {
+
     this.subscription.add(
-      this.blogService.posts.subscribe(posts => this.organizedPosts = new OrganizedPosts(posts))
+      this.blogService.posts.subscribe(posts => {
+        this.organizedPosts = new OrganizedPosts(posts);
+        this.route.queryParamMap.subscribe(params => {
+          if (params.has('id')) {
+            const path = atob(decodeURI(params.get('id')));
+            const post = this.organizedPosts.expensiveFind(path);
+            if (!!post) {
+              this.selectedPost = post;
+            }
+          }
+        });
+      })
     );
   }
 
@@ -34,7 +51,20 @@ export class BlogComponent implements OnInit, OnDestroy {
   }
 
   public selectPost(post: DecoratedBlogPost) {
-    this.selectedPost = post;
+    this.setPostAsQueryParam(post);
+  }
+
+  private setPostAsQueryParam(post: DecoratedBlogPost) {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {
+        id: encodeURI(btoa(post.path))
+      },
+      // preserve the existing query params in the route
+      queryParamsHandling: 'merge',
+      // do not trigger navigation
+      // skipLocationChange: true
+    }).then(() => this.selectedPost = post);
   }
 }
 
@@ -57,5 +87,14 @@ class OrganizedPosts {
 
   public get(key: string): DecoratedBlogPost[] {
     return this.items[key] || [];
+  }
+
+  // should only be used on page load if a link to a blog was copied.
+  public expensiveFind(path: string): DecoratedBlogPost {
+    const values = Object.values(this.items);
+    if (values.length <= 0) { return null; }
+    const maybeBlog = values.reduce((a, b) => [...a, ...b])
+      .filter(value => value.path === path);
+    return maybeBlog.length > 0 ? maybeBlog[0] : null;
   }
 }
