@@ -24,9 +24,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MediumFeedComponent } from './medium-feed/medium-feed.component';
 import { ResumeComponent } from './resume/resume.component';
 import { DashboardComponent } from './code/dashboard/dashboard.component';
-import {MarkdownModule} from 'ngx-markdown';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
-import { BlogComponent } from './blog/blog.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +38,6 @@ import { BlogComponent } from './blog/blog.component';
     MediumFeedComponent,
     ResumeComponent,
     DashboardComponent,
-    BlogComponent
   ],
   entryComponents: [TwitterFeedComponent, LinkedinBadgeComponent, MediumFeedComponent, WipCardComponent],
   imports: [
@@ -58,9 +55,6 @@ import { BlogComponent } from './blog/blog.component';
     MatSidenavModule,
     MatListModule,
     HttpClientModule,
-    MarkdownModule.forRoot({
-      loader: HttpClient
-    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

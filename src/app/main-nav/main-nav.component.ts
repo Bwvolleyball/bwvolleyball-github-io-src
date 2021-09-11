@@ -26,11 +26,6 @@ export class MainNavComponent {
       route: '/code',
       icon: 'code'
     },
-    {
-      title: 'Blog',
-      route: '/blog',
-      icon: 'engineering'
-    }
   ];
 
   constructor(private breakpointObserver: BreakpointObserver, private screenSizeService: ScreenSizeService) {
