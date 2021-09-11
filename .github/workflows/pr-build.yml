@@ -26,5 +26,6 @@ jobs:
         npm ci
         ng lint
         ng build
+        ng test
       env:
         CI: true
