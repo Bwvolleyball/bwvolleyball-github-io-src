@@ -2,7 +2,6 @@ import {Component, Injector} from '@angular/core';
 import {map} from 'rxjs/operators';
 import {Breakpoints, BreakpointObserver} from '@angular/cdk/layout';
 import {TwitterFeedComponent} from '../twitter-feed/twitter-feed.component';
-import {WipCardComponent} from '../wip-card/wip-card.component';
 import {LinkedinBadgeComponent} from '../linkedin-badge/linkedin-badge.component';
 import {MediumFeedComponent} from '../medium-feed/medium-feed.component';
 import {ResumeComponent} from '../resume/resume.component';
@@ -14,7 +13,6 @@ import {ResumeComponent} from '../resume/resume.component';
 })
 export class MainDashboardComponent {
 
-  injector: Injector;
   twitterFeedComponent = TwitterFeedComponent;
   linkedinBadgeComponent = LinkedinBadgeComponent;
   mediumFeedComponent = MediumFeedComponent;
@@ -41,6 +39,9 @@ export class MainDashboardComponent {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    public injector: Injector
+  ) {
   }
 }

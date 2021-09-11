@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -8,7 +10,11 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      declarations: [ DashboardComponent ],
+      imports: [
+        MatGridListModule,
+        MatCardModule,
+      ]
     })
     .compileComponents();
   });

@@ -8,6 +8,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { MainNavComponent } from './main-nav.component';
+import {RouterTestingModule} from '@angular/router/testing';
+import {Component} from '@angular/core';
+
+@Component({
+  selector: 'app-footer',
+  template: '<p>Mock App Footer</p>'
+})
+class MockAppFooterComponent {}
 
 describe('MainNavComponent', () => {
   let component: MainNavComponent;
@@ -15,7 +23,10 @@ describe('MainNavComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [MainNavComponent],
+      declarations: [
+        MainNavComponent,
+        MockAppFooterComponent
+      ],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
@@ -24,6 +35,7 @@ describe('MainNavComponent', () => {
         MatListModule,
         MatSidenavModule,
         MatToolbarModule,
+        RouterTestingModule,
       ]
     }).compileComponents();
   }));

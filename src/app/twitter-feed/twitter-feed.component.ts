@@ -11,6 +11,6 @@ export class TwitterFeedComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    (window as any).twttr.widgets.load();
+    (window as any)?.twttr?.widgets?.load();
   }
 }

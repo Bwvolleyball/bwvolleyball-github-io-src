@@ -1,6 +1,13 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {Component} from '@angular/core';
+
+@Component({
+  selector: 'app-main-nav',
+  template: '<p>Mock App Main Nav</p>'
+})
+class MockAppMainNavComponent {}
 
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
@@ -9,7 +16,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MockAppMainNavComponent
       ],
     }).compileComponents();
   }));
@@ -18,18 +26,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'bwvolleyball-github-io-src'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('bwvolleyball-github-io-src');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('bwvolleyball-github-io-src app is running!');
   });
 });
