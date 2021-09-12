@@ -15,6 +15,12 @@ class MockAppHeaderComponent {}
 })
 class MockAppFooterV2Component {}
 
+@Component({
+  selector: 'app-under-construction',
+  template: '<p>Mock App Header</p>'
+})
+class MockAppUnderConstructionComponent {}
+
 describe('MainSpaComponent', () => {
   let component: MainSpaComponent;
   let fixture: ComponentFixture<MainSpaComponent>;
@@ -25,6 +31,7 @@ describe('MainSpaComponent', () => {
         MainSpaComponent,
         MockAppHeaderComponent,
         MockAppFooterV2Component,
+        MockAppUnderConstructionComponent
       ]
     })
     .compileComponents();

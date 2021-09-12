@@ -17,6 +17,12 @@ import {Component} from '@angular/core';
 })
 class MockAppFooterComponent {}
 
+@Component({
+  selector: 'app-under-construction',
+  template: '<p>Mock App Header</p>'
+})
+class MockAppUnderConstructionComponent {}
+
 describe('MainNavComponent', () => {
   let component: MainNavComponent;
   let fixture: ComponentFixture<MainNavComponent>;
@@ -25,6 +31,7 @@ describe('MainNavComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         MainNavComponent,
+        MockAppUnderConstructionComponent,
         MockAppFooterComponent
       ],
       imports: [

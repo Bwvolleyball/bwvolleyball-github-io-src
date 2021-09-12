@@ -29,6 +29,8 @@ import {MainSpaComponent} from './v2/main-spa/main-spa.component';
 import {FooterV2Component} from './v2/footer/footer.component';
 import { HeaderComponent } from './v2/header/header.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { UnderConstructionComponent } from './v2/under-construction/under-construction.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -47,12 +49,14 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MainSpaComponent,
     FooterV2Component,
     HeaderComponent,
+    UnderConstructionComponent,
   ],
   entryComponents: [TwitterFeedComponent, LinkedinBadgeComponent, MediumFeedComponent, WipCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
