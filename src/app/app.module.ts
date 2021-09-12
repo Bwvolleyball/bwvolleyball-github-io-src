@@ -25,10 +25,15 @@ import { MediumFeedComponent } from './medium-feed/medium-feed.component';
 import { ResumeComponent } from './resume/resume.component';
 import { DashboardComponent } from './code/dashboard/dashboard.component';
 import { HttpClientModule} from '@angular/common/http';
+import {MainSpaComponent} from './v2/main-spa/main-spa.component';
+import {FooterV2Component} from './v2/footer/footer.component';
+import { HeaderComponent } from './v2/header/header.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
     AppComponent,
+    // FIXME: Start old components
     MainDashboardComponent,
     MainNavComponent,
     TwitterFeedComponent,
@@ -38,6 +43,10 @@ import { HttpClientModule} from '@angular/common/http';
     MediumFeedComponent,
     ResumeComponent,
     DashboardComponent,
+    // FIXME: Start new components
+    MainSpaComponent,
+    FooterV2Component,
+    HeaderComponent,
   ],
   entryComponents: [TwitterFeedComponent, LinkedinBadgeComponent, MediumFeedComponent, WipCardComponent],
   imports: [
@@ -55,6 +64,7 @@ import { HttpClientModule} from '@angular/common/http';
     MatSidenavModule,
     MatListModule,
     HttpClientModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

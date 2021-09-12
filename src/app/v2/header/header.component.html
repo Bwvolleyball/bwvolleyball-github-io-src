@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>Brandon Ward</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="sub-title">
+    <ng-container *ngFor="let username of usernames; let last = last">
+      <a [href]="username.href">
+      <span [matTooltip]="username.tooltip">
+        <mat-icon [svgIcon]="username.svgIcon"></mat-icon>
+        {{username.username}}
+      </span>
+      </a>
+      <span *ngIf="!last">&nbsp;&nbsp;|&nbsp;</span>
+    </ng-container>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -9,6 +9,12 @@ import {Component} from '@angular/core';
 })
 class MockAppMainNavComponent {}
 
+@Component({
+  selector: 'app-main-spa',
+  template: '<p>Mock App Main Spa</p>'
+})
+class MockAppMainSpaComponent {}
+
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -17,7 +23,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        MockAppMainNavComponent
+        MockAppMainNavComponent,
+        MockAppMainSpaComponent
       ],
     }).compileComponents();
   }));
