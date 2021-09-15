@@ -1,19 +1,8 @@
 <footer>
-  <mat-grid-list cols="3">
-    <mat-grid-tile>
-      <mat-card>
-        <mat-card-title>Attribution</mat-card-title>
-        <mat-card-subtitle>This project is entirely open source, leveraging other open source or free-with-attribution tools.</mat-card-subtitle>
-        <mat-card-content>
-          <mat-list dense>
-            <!-- TODO: turn into a tree. -->
-            <mat-list-item><a href="https://iconscout.com/icons/github" target="_blank">Github Icon</a>&nbsp;by&nbsp;<a href="https://iconscout.com/contributors/unicons" target="_blank">Unicons Font</a>&nbsp; on &nbsp;<a href="https://iconscout.com">Iconscout</a></mat-list-item>
-            <mat-list-item><a href="https://iconscout.com/icons/twitter" target="_blank">Twitter Icon</a>&nbsp; by &nbsp;<a href="https://iconscout.com/contributors/unicons">Unicons Font</a>&nbsp; on &nbsp;<a href="https://iconscout.com">Iconscout</a></mat-list-item>
-            <mat-list-item><a href="https://iconscout.com/icons/blogging" target="_blank">Blogging Icon</a>&nbsp; by &nbsp;<a href="https://iconscout.com/contributors/theiconz" target="_blank">Diacanvas Studio</a>&nbsp; on &nbsp;<a href="https://iconscout.com">Iconscout</a></mat-list-item>
-            <mat-list-item><a href="https://iconscout.com/illustrations/building-website" target="_blank">Building Website Illustration</a>&nbsp; by &nbsp;<a href="https://iconscout.com/contributors/manypixels-gallery">Manypixels Gallery</a>&nbsp; on &nbsp;<a href="https://iconscout.com">Iconscout</a></mat-list-item>
-          </mat-list>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <mat-toolbar>
+    <mat-list dense>
+      <mat-list-item><a routerLink="/v2/credits">Credits</a></mat-list-item>
+    </mat-list>
+    <span class="copyright" fxLayout="row" fxFlex fxLayoutAlign="end">© Brandon Ward - 2019-2021</span>
+  </mat-toolbar>
 </footer>

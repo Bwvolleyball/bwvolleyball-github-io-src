@@ -31,6 +31,11 @@ import { HeaderComponent } from './v2/header/header.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { UnderConstructionComponent } from './v2/under-construction/under-construction.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { CreditsComponent } from './v2/credits/credits.component';
+import { HomeComponent } from './v2/home/home.component';
+import { WrapperComponent } from './v2/wrapper/wrapper.component';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatTreeModule} from '@angular/material/tree';
 
 @NgModule({
   declarations: [
@@ -50,6 +55,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     FooterV2Component,
     HeaderComponent,
     UnderConstructionComponent,
+    CreditsComponent,
+    HomeComponent,
+    WrapperComponent,
   ],
   entryComponents: [TwitterFeedComponent, LinkedinBadgeComponent, MediumFeedComponent, WipCardComponent],
   imports: [
@@ -69,6 +77,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatListModule,
     HttpClientModule,
     MatTooltipModule,
+    MatTreeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

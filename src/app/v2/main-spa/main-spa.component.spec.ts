@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainSpaComponent } from './main-spa.component';
 import {Component} from '@angular/core';
+import {RouterTestingModule} from '@angular/router/testing';
 
 @Component({
   selector: 'app-header',
@@ -15,12 +16,6 @@ class MockAppHeaderComponent {}
 })
 class MockAppFooterV2Component {}
 
-@Component({
-  selector: 'app-under-construction',
-  template: '<p>Mock App Header</p>'
-})
-class MockAppUnderConstructionComponent {}
-
 describe('MainSpaComponent', () => {
   let component: MainSpaComponent;
   let fixture: ComponentFixture<MainSpaComponent>;
@@ -31,7 +26,9 @@ describe('MainSpaComponent', () => {
         MainSpaComponent,
         MockAppHeaderComponent,
         MockAppFooterV2Component,
-        MockAppUnderConstructionComponent
+      ],
+      imports: [
+        RouterTestingModule,
       ]
     })
     .compileComponents();

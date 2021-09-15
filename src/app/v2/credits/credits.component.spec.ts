@@ -1,30 +1,30 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterV2Component } from './footer.component';
+import { CreditsComponent } from './credits.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {MatIconTestingModule} from '@angular/material/icon/testing';
 import {MatListModule} from '@angular/material/list';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatToolbarModule} from '@angular/material/toolbar';
 
-describe('FooterV2Component', () => {
-  let component: FooterV2Component;
-  let fixture: ComponentFixture<FooterV2Component>;
+describe('CreditsComponent', () => {
+  let component: CreditsComponent;
+  let fixture: ComponentFixture<CreditsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FooterV2Component ],
+      declarations: [ CreditsComponent ],
       imports: [
         MatCardModule,
-        MatListModule,
-        MatGridListModule,
-        MatToolbarModule,
-      ],
+        MatIconModule,
+        MatIconTestingModule,
+        MatListModule
+      ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FooterV2Component);
+    fixture = TestBed.createComponent(CreditsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

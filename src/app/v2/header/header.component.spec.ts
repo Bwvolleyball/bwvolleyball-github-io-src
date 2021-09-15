@@ -9,7 +9,6 @@ import {MatIconModule} from '@angular/material/icon';
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
-  // let loader: HarnessLoader;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -26,7 +25,6 @@ describe('HeaderComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);
-    // loader = TestbedHarnessEnvironment.loader(fixture);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
