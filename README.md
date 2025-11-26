@@ -1,5 +1,6 @@
 # bwvolleyball.github.io (Source)
 > This project is the source code for my GitHub Pages website.
+> **NOTE** Builds are disabled for this project, I've probably abandoned this site for good.
 
 This is an Angular project, being used as my [GitHub pages website](https://bwvolleyball.github.io/).
 

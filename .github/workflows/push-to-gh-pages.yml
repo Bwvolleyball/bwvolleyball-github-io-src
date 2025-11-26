@@ -1,32 +1,32 @@
-name: Push to Github Pages
-
-on:
-  push:
-    branches:
-      - master # - only push to GitHub pages from the master branch
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, deploy to github pages
-      run: |
-        npm install -g @angular/cli
-        npm ci
-        ng test
-        ng deploy --repo=https://github.com/bwvolleyball/bwvolleyball.github.io.git --name=bwvolleyball --email=$EMAIL --message="Built from ${GITHUB_SHA} in the source repository." --branch=master
-      env:
-        CI: true
-        GH_TOKEN: ${{ secrets.GithubToken }}
-        EMAIL: ${{ secrets.Email }}
+#name: Push to Github Pages
+#
+#on:
+#  push:
+#    branches:
+#      - master # - only push to GitHub pages from the master branch
+#
+#jobs:
+#  build:
+#
+#    runs-on: ubuntu-latest
+#
+#    strategy:
+#      matrix:
+#        node-version: [18.x]
+#
+#    steps:
+#    - uses: actions/checkout@v4
+#    - name: Use Node.js ${{ matrix.node-version }}
+#      uses: actions/setup-node@v4
+#      with:
+#        node-version: ${{ matrix.node-version }}
+#    - name: npm install, deploy to github pages
+#      run: |
+#        npm install -g @angular/cli
+#        npm ci
+#        ng test
+#        ng deploy --repo=https://github.com/bwvolleyball/bwvolleyball.github.io.git --name=bwvolleyball --email=$EMAIL --message="Built from ${GITHUB_SHA} in the source repository." --branch=master
+#      env:
+#        CI: true
+#        GH_TOKEN: ${{ secrets.GithubToken }}
+#        EMAIL: ${{ secrets.Email }}
